@@ -1,0 +1,29 @@
+#music-button-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 6vw;
+    width: 85%;
+    transform: scale(0.7);
+    .col {
+        padding: 5%;
+    }
+
+    svg {
+        transform: scale(0.2);
+    }
+}
+
+#option-menu-wrapper {
+
+    #option-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+    }
+}
