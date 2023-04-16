@@ -1,0 +1,238 @@
+// Variables
+$primary: #1db954;
+$light-gray: #b3b3b3;
+
+// Player Container
+.player-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+
+  .player-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      color: #fff;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    svg {
+      color: $primary;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .player-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .player-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+    h3 {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $light-gray;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+
+      svg {
+        color: $primary;
+        font-size: 0.875rem;
+        margin-right: 0.25rem;
+      }
+
+      span {
+        color: $light-gray;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+
+  .player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #282828;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      border-radius: 50%;
+      height: 3.5rem;
+      width: 3.5rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+      }
+    }
+
+    .play {
+      background-color: $primary;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+
+      &:active {
+        background-color: darken($primary, 20%);
+      }
+    }
+
+    .pause {
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+        
+.player-progress {
+    background-color: #eaeaea;
+    height: 2px;
+    margin-top: 1rem;
+    position: relative;
+  
+    &__slider {
+      appearance: none;
+      background-color: transparent;
+      height: 8px;
+      position: absolute;
+      top: -3px;
+      width: 100%;
+  
+      &::-webkit-slider-thumb {
+        appearance: none;
+        background-color: #ff4d4f;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+      }
+  
+      &::-moz-range-thumb {
+        appearance: none;
+        background-color: #ff4d4f;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+      }
+  
+      &::-ms-thumb {
+        appearance: none;
+        background-color: #ff4d4f;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+      }
+  
+      &::-webkit-slider-runnable-track {
+        background: linear-gradient(
+          to right,
+          #ff4d4f 0%,
+          #ff4d4f calc(100% - 7px),
+          #eaeaea calc(100% - 7px),
+          #eaeaea 100%
+        );
+      }
+  
+      &::-moz-range-track {
+        background: linear-gradient(
+          to right,
+          #ff4d4f 0%,
+          #ff4d4f calc(100% - 7px),
+          #eaeaea calc(100% - 7px),
+          #eaeaea 100%
+        );
+      }
+  
+      &::-ms-track {
+        background: linear-gradient(
+          to right,
+          #ff4d4f 0%,
+          #ff4d4f calc(100% - 7px),
+          #eaeaea calc(100% - 7px),
+          #eaeaea 100%
+        );
+      }
+    }
+  
+    &__time {
+      color: #6c757d;
+      display: flex;
+      font-size: 0.8rem;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+  
+      span {
+        &:first-child {
+          order: 1;
+        }
+  
+        &:last-child {
+          order: 2;
+        }
+      }
+    }
+  }
+  
+    .controls {
+    max-height: 3rem;
+    svg {
+        transform: scale(0.3);
+    }
+  }
