@@ -70,4 +70,18 @@
       </div>
     </div>
   </div>
+
+
+  <div>
+    <h3>Upload an Audio File</h3>
+    <form [formGroup]="fileFormGroup">
+      <div>
+        <input formControlName="fileForm" type="file" (change)="handleFileInput($event)" >
+        <!-- <input formControlName="fileForm" type="file" (change)="handleFileInput($event)" accept=".mp3, .wav"> -->
+      </div>
+      <div>
+        <button type="button" (click)="uploadFileToServer()">Upload</button>
+      </div>
+    </form>
+  </div>
   
