@@ -35,7 +35,7 @@ export class PlayerComponent implements OnInit {
     const audioUrl = 'http://localhost:3000/stream';
     const headers = {
       'Content-Type': 'audio/mpeg',
-      // 'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': '*',
     };
 
     return new Promise(async (resolve, reject) => {
